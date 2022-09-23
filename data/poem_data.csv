@@ -1,0 +1,13 @@
+state,text
+intro,"I will read a poem, when I pause you may recite back what I said as accurately as possible. After you recite it back, we will continue to the next verse, until the poem is finished. "
+confirmation,Are you ready?
+title,The first poem is “Invention” by Billy Collins. Here we go! 
+line,"Tonight the moon is a cracker, "
+line,"nothing but stars in the sky, and I will have a few nights to myself, a little time to rest my jittery pen. "
+title,"We will now recite another poem, called “The Moment” by Margaret Atwood "
+line,"The moment when, after many years of hard work and a long voyage"
+line,We never belonged to you. You never found us. It was always the other way round. 
+title,"We will now recite another poem, called “Stopping by woods on a snowy evening” by Robert Frost"
+line,Whose woods these are I think I know. His house is in the village though; He will not see me stopping here 
+line,"The woods are lovely, dark and deep, But I have promises to keep, And miles to go before I sleep, And miles to go before I sleep. "
+conclusion,Thank you for participating!
