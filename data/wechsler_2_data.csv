@@ -9,7 +9,33 @@ done_confirmation,Do you have anything else to add?
 recognition_prompt,"I am going to ask you some questions about the first story. If you are not sure of the answers, give your best guess.  "
 question,Was the woman’s name Diana Thompson?
 question,Was the story setting in South Boston?
+question,Was the woman a cook?
+question,Did she work at a restaurant?
+question,Did she have four children?
+question,Were the children teenagers?
+question,Did the robbery take place on sixth street?
+question,Did the woman report being robbed two nights before?
+question,Did she report robbery at the police station?
+question,Was the woman robbed of 75 dollars?
+question,Did the family go without food for four days?
+question,Was the rent due?
+question,Did the police catch the thief?
+question,Did the police feel sorry for the woman?
+question,Did the police take up a collection?
 recognition_prompt,"Now, I am going to ask you some questions about the second story. If you are not sure of the answers, give your best guess. "
 question,Was the man’s name Joe Garcia?
 question,Was it Sunday evening?
+question,Was it 6:00?
+question,Was the story setting in Seattle?
+question,Was Joe dressing to go out?
+question,Was Joe watching television?
+question,Was the program interrupted?
+question,Was the storm expected to move into the area on Tuesday?
+question,Was the storm expected to stay in the area through the night?
+question,Was the temperature predicted to drop 30 degrees?
+question,Did the announcer predict 10 inches of rain?
+question,Did the announcer warn of possible flooding?
+question,Did the announcer warn that it could hail?
+question,Did Joe decide to stay home?
+question,Did Joe sit down to watch a sports program?
 conclusion,Thank you for participating!
