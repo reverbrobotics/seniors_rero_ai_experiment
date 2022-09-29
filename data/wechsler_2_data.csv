@@ -1,0 +1,15 @@
+state,text
+intro,Do you remember the stories I read to you a little while ago? I want you to tell me the stories again. Tell me everything that you can remember about the first story. Start at the beginning. Do you need a hint about the story topic?
+hint,The story was about a woman who was robbed.
+prompt, Now tell me everything that you can remember about the first story.
+intro,Now tell me everything that you can remember about the second story. Start at the beginning.  Do you need a hint about the story topic?
+hint,The story was about a weather bulletin
+prompt, Now tell me everything that you can remember about the second story.
+done_confirmation,Do you have anything else to add?
+recognition_prompt,"I am going to ask you some questions about the first story. If you are not sure of the answers, give your best guess.  "
+question,Was the woman’s name Diana Thompson?
+question,Was the story setting in South Boston?
+recognition_prompt,"Now, I am going to ask you some questions about the second story. If you are not sure of the answers, give your best guess. "
+question,Was the man’s name Joe Garcia?
+question,Was it Sunday evening?
+conclusion,Thank you for participating!
