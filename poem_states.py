@@ -26,7 +26,7 @@ class PoemStateMachine(SpeechInterfaceStateMachine):
 
         res = self.speech_interface.getRawSRResult()
 
-        if res is not None and "yes" in res:
+        if res is not None and ("yes" in res or "yup" in res or "yeah" in res):
             return (title_state, None)
 
         return ("confirm", None)

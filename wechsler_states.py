@@ -39,7 +39,7 @@ class Wechsler1StateMachine(SpeechInterfaceStateMachine):
 
         res = self.speech_interface.getRawSRResult()
 
-        if "yes" in res:
+        if res is not None and ("yes" in res or "yup" in res or "yeah" in res):
             return ("story", None)
 
         return ("confirm", None)
@@ -85,7 +85,7 @@ class Wechsler1StateMachine(SpeechInterfaceStateMachine):
 
         res = self.speech_interface.getRawSRResult()
 
-        if res is not None and "yes" not in res:
+        if res is not None and "yes" not in res and "yeah" not in res and "yup" not in res:
             if self.story_count < len(self.story_texts):
                 return ("intro", None)
 
@@ -197,7 +197,7 @@ class Wechsler2StateMachine(SpeechInterfaceStateMachine):
 
         res = self.speech_interface.getRawSRResult()
 
-        if "yes" in res:
+        if res is not None and ("yes" in res or "yeah" in res or "yup" in res):
             return ("hint", None)
 
         return ("prompt", None)
@@ -250,7 +250,7 @@ class Wechsler2StateMachine(SpeechInterfaceStateMachine):
 
         res = self.speech_interface.getRawSRResult()
 
-        if res is not None and "yes" not in res:
+        if res is not None and "yes" not in res and "yup" not in res and "yeah" not in res:
             return ("recognition_prompt", None)
 
         return ("response_prompt", None)
@@ -265,7 +265,7 @@ class Wechsler2StateMachine(SpeechInterfaceStateMachine):
         res = self.speech_interface.getRawSRResult()
         sttend = time.time() * 1000
 
-        if "yes" not in res and "no" not in res:
+        if res is not None and ("yes" not in res and "yeah" not in res and "yup" not in res) and "no" not in res:
             return ("question", None)
 
         self.question_count += 1

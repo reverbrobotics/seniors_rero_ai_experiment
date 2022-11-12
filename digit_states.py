@@ -48,7 +48,7 @@ class DigitMachine(SpeechInterfaceStateMachine):
         res = self.speech_interface.getRawSRResult()
         self.fail_count = 0
 
-        if res is not None and "yes" in res:
+        if res is not None and ("yes" in res or "yeah" in res or "yup" in res):
             if self.intro_count == 1:
                 return ("read_backward_digits", None)
             else:

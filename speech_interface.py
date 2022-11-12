@@ -63,7 +63,11 @@ class SpeechInterface:
 
         #get speech recognition result synchronously (call sr_stub.RecognizeSpeech.future for asynchronous object)
         audio_stream = self.audio_stub.GetStream(request)
+
         sr_result = self.sr_stub.RecognizeSpeech(audio_stream)
+
+        for audio in audio_stream:
+            print(audio)
 
         #parse json result
         parsed_result = json.loads(sr_result.result)
