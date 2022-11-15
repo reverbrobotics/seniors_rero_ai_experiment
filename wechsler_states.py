@@ -239,7 +239,7 @@ class Wechsler2StateMachine(SpeechInterfaceStateMachine):
 
         print("response: ", res)
 
-        if res is not None and res == "" or res == "huh":
+        if res is not None and not (res == "" or res == "huh"):
             return ("response_record", tts_end)
 
         return("done_confirmation", None)
