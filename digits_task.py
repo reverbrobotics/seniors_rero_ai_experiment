@@ -11,7 +11,7 @@ from speech_interface import SpeechInterface
 import argparse
 
 parser = argparse.ArgumentParser(description="Digits Experiment")
-parser.add_argument('--grpc_host', default="0.0.0.0:50052", help="gRPC rero_core address (default 0.0.0.0:50052)")
+parser.add_argument('--grpc_host', default="10.42.0.242:50052", help="gRPC rero_core address (default 0.0.0.0:50052)")
 parser.add_argument('--dataset_csv', default="data/digits_data.csv", help="path to dataset to run participant on (default data/digits_data.csv)")
 parser.add_argument('--logging_csv', default="recordings/test_digits.csv", help="path to write participant data to (default recordings/test_digits.csv)")
 ARGS = parser.parse_args()

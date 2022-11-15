@@ -5,6 +5,8 @@ from time import sleep
 import time
 
 from speech_interface import SpeechInterfaceStateMachine
+from util import check_string_confirm
+
 
 class Wechsler1StateMachine(SpeechInterfaceStateMachine):
     def __init__(self, speech_interface, wechsler_data_csv, participant_dest_csv):
@@ -39,7 +41,7 @@ class Wechsler1StateMachine(SpeechInterfaceStateMachine):
 
         res = self.speech_interface.getRawSRResult()
 
-        if res is not None and ("yes" in res or "yup" in res or "yeah" in res):
+        if res is not None and check_string_confirm(res):
             return ("story", None)
 
         return ("confirm", None)
@@ -75,7 +77,7 @@ class Wechsler1StateMachine(SpeechInterfaceStateMachine):
 
         print("response: ", res)
 
-        if res is not None and res != "":
+        if res is not None and len(res) > 10:
             return ("response_record", tts_end)
 
         return("done_confirmation", None)
@@ -85,7 +87,7 @@ class Wechsler1StateMachine(SpeechInterfaceStateMachine):
 
         res = self.speech_interface.getRawSRResult()
 
-        if res is not None and "yes" not in res and "yeah" not in res and "yup" not in res:
+        if res is not None and not check_string_confirm(res):
             if self.story_count < len(self.story_texts):
                 return ("intro", None)
 
@@ -197,7 +199,7 @@ class Wechsler2StateMachine(SpeechInterfaceStateMachine):
 
         res = self.speech_interface.getRawSRResult()
 
-        if res is not None and ("yes" in res or "yeah" in res or "yup" in res):
+        if res is not None and check_string_confirm(res):
             return ("hint", None)
 
         return ("prompt", None)
@@ -231,7 +233,7 @@ class Wechsler2StateMachine(SpeechInterfaceStateMachine):
 
         print("response: ", res)
 
-        if res is not None and res != "":
+        if res is not None and len(res) > 10:
             return ("response_record", tts_end)
 
         return("done_confirmation", None)
@@ -250,10 +252,10 @@ class Wechsler2StateMachine(SpeechInterfaceStateMachine):
 
         res = self.speech_interface.getRawSRResult()
 
-        if res is not None and "yes" not in res and "yup" not in res and "yeah" not in res:
+        if res is not None and not check_string_confirm(res):
             return ("recognition_prompt", None)
 
-        return ("response_prompt", None)
+        return ("question", None)
 
     def question(self, args):
         self.speech_interface.TTS(self.questions[self.recognition_prompt_count][self.question_count])
@@ -264,9 +266,6 @@ class Wechsler2StateMachine(SpeechInterfaceStateMachine):
     def question_response(self, tts_end):
         res = self.speech_interface.getRawSRResult()
         sttend = time.time() * 1000
-
-        if res is not None and ("yes" not in res and "yeah" not in res and "yup" not in res) and "no" not in res:
-            return ("question", None)
 
         self.question_count += 1
 

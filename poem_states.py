@@ -5,6 +5,8 @@ from time import sleep
 import time
 
 from speech_interface import SpeechInterfaceStateMachine
+from util import check_string_confirm
+
 
 class PoemStateMachine(SpeechInterfaceStateMachine):
     def __init__(self, speech_interface, poem_data_csv, participant_dest_csv):
@@ -26,7 +28,7 @@ class PoemStateMachine(SpeechInterfaceStateMachine):
 
         res = self.speech_interface.getRawSRResult()
 
-        if res is not None and ("yes" in res or "yup" in res or "yeah" in res):
+        if res is not None and check_string_confirm(res):
             return (title_state, None)
 
         return ("confirm", None)

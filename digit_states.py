@@ -6,6 +6,8 @@ import time
 import re
 
 from speech_interface import SpeechInterfaceStateMachine
+from util import check_string_confirm
+
 
 class DigitMachine(SpeechInterfaceStateMachine):
     def __init__(self, speech_interface, digit_data_csv, participant_dest_csv):
@@ -48,7 +50,7 @@ class DigitMachine(SpeechInterfaceStateMachine):
         res = self.speech_interface.getRawSRResult()
         self.fail_count = 0
 
-        if res is not None and ("yes" in res or "yeah" in res or "yup" in res):
+        if res is not None and check_string_confirm(res):
             if self.intro_count == 1:
                 return ("read_backward_digits", None)
             else:
