@@ -81,7 +81,7 @@ class Wechsler1StateMachine(SpeechInterfaceStateMachine):
 
         print("response: ", res)
 
-        if res is not None and len(res) > 10:
+        if res is not None and res == "" or res == "huh":
             return ("response_record", tts_end)
 
         return("done_confirmation", None)
@@ -237,7 +237,7 @@ class Wechsler2StateMachine(SpeechInterfaceStateMachine):
 
         print("response: ", res)
 
-        if res is not None and len(res) > 10:
+        if res is not None and res == "" or res == "huh":
             return ("response_record", tts_end)
 
         return("done_confirmation", None)
