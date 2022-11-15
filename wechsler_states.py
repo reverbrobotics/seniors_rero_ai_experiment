@@ -83,8 +83,7 @@ class Wechsler1StateMachine(SpeechInterfaceStateMachine):
 
         print("response: ", res)
 
-        if res is not None and (res == "" or res == "huh"):
-            self.speech_interface.TTS("What else would you like to add?")
+        if res is not None and not (res == "" or res == "huh"):
             return ("response_record", tts_end)
 
         return("done_confirmation", None)
