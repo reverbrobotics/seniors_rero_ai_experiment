@@ -47,7 +47,11 @@ class Wechsler1StateMachine(SpeechInterfaceStateMachine):
         return ("confirm", None)
 
     def story(self, args):
-        self.speech_interface.TTS(self.story_texts[self.story_count])
+        story_txt = self.story_texts[self.story_count]
+        story_txts = story_txt.split('.')
+
+        for txt in story_txts:
+            self.speech_interface.TTS(txt+'.')
         sleep(0.5)
 
         self.response_count = 0
