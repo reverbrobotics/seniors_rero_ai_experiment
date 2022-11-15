@@ -31,7 +31,6 @@ class Wechsler1StateMachine(SpeechInterfaceStateMachine):
     def read_intro(self, args):
         self.speech_interface.TTS(self.intro_texts[self.intro_count])
         self.intro_count += 1
-        sleep(0.5)
 
         return ("confirm", None)
 
@@ -47,11 +46,14 @@ class Wechsler1StateMachine(SpeechInterfaceStateMachine):
         return ("confirm", None)
 
     def story(self, args):
+        self.speech_interface.TTS("Ok, here we go!")
         story_txt = self.story_texts[self.story_count]
-        story_txts = story_txt.split('.')
+        # story_txts = story_txt.split('.')
+        #
+        # for txt in story_txts:
+        #     self.speech_interface.TTS(txt+'.')
 
-        for txt in story_txts:
-            self.speech_interface.TTS(txt+'.')
+        self.speech_interface.TTS(story_txt)
         sleep(0.5)
 
         self.response_count = 0
