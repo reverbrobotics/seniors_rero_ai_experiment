@@ -15,11 +15,13 @@ _sym_db = _symbol_database.Default()
 from . import audio_pb2 as audio__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x18speech_recognition.proto\x12\x04rero\x1a\x0b\x61udio.proto\")\n\x17SpeechRecognitionResult\x12\x0e\n\x06result\x18\x01 \x01(\t2V\n\x11SpeechRecognition\x12\x41\n\x0fRecognizeSpeech\x12\x0b.rero.Audio\x1a\x1d.rero.SpeechRecognitionResult\"\x00(\x01\x62\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x18speech_recognition.proto\x12\x04rero\x1a\x0b\x61udio.proto\")\n\x17SpeechRecognitionResult\x12\x0e\n\x06result\x18\x01 \x01(\t\"\x1d\n\x0bVocabResult\x12\x0e\n\x06result\x18\x01 \x01(\t\"\x16\n\x05Vocab\x12\r\n\x05vocab\x18\x01 \x01(\t2\x84\x01\n\x11SpeechRecognition\x12\x41\n\x0fRecognizeSpeech\x12\x0b.rero.Audio\x1a\x1d.rero.SpeechRecognitionResult\"\x00(\x01\x12,\n\x08SetVocab\x12\x0b.rero.Vocab\x1a\x11.rero.VocabResult\"\x00\x62\x06proto3')
 
 
 
 _SPEECHRECOGNITIONRESULT = DESCRIPTOR.message_types_by_name['SpeechRecognitionResult']
+_VOCABRESULT = DESCRIPTOR.message_types_by_name['VocabResult']
+_VOCAB = DESCRIPTOR.message_types_by_name['Vocab']
 SpeechRecognitionResult = _reflection.GeneratedProtocolMessageType('SpeechRecognitionResult', (_message.Message,), {
   'DESCRIPTOR' : _SPEECHRECOGNITIONRESULT,
   '__module__' : 'speech_recognition_pb2'
@@ -27,12 +29,30 @@ SpeechRecognitionResult = _reflection.GeneratedProtocolMessageType('SpeechRecogn
   })
 _sym_db.RegisterMessage(SpeechRecognitionResult)
 
+VocabResult = _reflection.GeneratedProtocolMessageType('VocabResult', (_message.Message,), {
+  'DESCRIPTOR' : _VOCABRESULT,
+  '__module__' : 'speech_recognition_pb2'
+  # @@protoc_insertion_point(class_scope:rero.VocabResult)
+  })
+_sym_db.RegisterMessage(VocabResult)
+
+Vocab = _reflection.GeneratedProtocolMessageType('Vocab', (_message.Message,), {
+  'DESCRIPTOR' : _VOCAB,
+  '__module__' : 'speech_recognition_pb2'
+  # @@protoc_insertion_point(class_scope:rero.Vocab)
+  })
+_sym_db.RegisterMessage(Vocab)
+
 _SPEECHRECOGNITION = DESCRIPTOR.services_by_name['SpeechRecognition']
 if _descriptor._USE_C_DESCRIPTORS == False:
 
   DESCRIPTOR._options = None
   _SPEECHRECOGNITIONRESULT._serialized_start=47
   _SPEECHRECOGNITIONRESULT._serialized_end=88
-  _SPEECHRECOGNITION._serialized_start=90
-  _SPEECHRECOGNITION._serialized_end=176
+  _VOCABRESULT._serialized_start=90
+  _VOCABRESULT._serialized_end=119
+  _VOCAB._serialized_start=121
+  _VOCAB._serialized_end=143
+  _SPEECHRECOGNITION._serialized_start=146
+  _SPEECHRECOGNITION._serialized_end=278
 # @@protoc_insertion_point(module_scope)

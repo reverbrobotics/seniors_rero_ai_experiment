@@ -38,6 +38,7 @@ class DigitMachine(SpeechInterfaceStateMachine):
         self.load_digit_states()
 
     def read_intro(self, args):
+        self.speech_interface.setVocab("")
         self.speech_interface.TTS(self.intro_texts[self.intro_count])
         self.intro_count += 1
 
@@ -51,6 +52,8 @@ class DigitMachine(SpeechInterfaceStateMachine):
         self.fail_count = 0
 
         if res is not None and check_string_confirm(res):
+            self.speech_interface.setVocab("zero one two three four five six seven eight nine")
+
             if self.intro_count == 1:
                 return ("read_backward_digits", None)
             else:
@@ -132,6 +135,7 @@ class DigitMachine(SpeechInterfaceStateMachine):
         return ("read_sequence_digits", None)
 
     def conclusion(self, args):
+        self.speech_interface.setVocab("")
         self.speech_interface.TTS(self.conclusion_text)
         return("write_data", None)
 

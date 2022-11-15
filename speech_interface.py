@@ -3,6 +3,7 @@ import grpc
 import rero_grpc.audio_pb2_grpc as audio_grpc
 import rero_grpc.audio_pb2 as audio
 import rero_grpc.speech_recognition_pb2_grpc as sr_grpc
+import rero_grpc.speech_recognition_pb2 as sr
 import rero_grpc.nlu_pb2 as nlu
 import rero_grpc.nlu_pb2_grpc as nlu_grpc
 import rero_grpc.text_to_speech_pb2_grpc as tts_grpc
@@ -29,6 +30,11 @@ class SpeechInterface:
 
     def __exit__(self, exc_type, exc_value, traceback):
         self.channel.close()
+
+    def setVocab(self, vocab):
+        vocab_request = sr.Vocab()
+        vocab_request.vocab = vocab
+        self.sr_stub.SetVocab(vocab_request)
 
     def getRawSRResult(self):
         # create audio request object
