@@ -89,6 +89,8 @@ class DigitMachine(SpeechInterfaceStateMachine):
 
         if not check:
             self.fail_count += 1
+        else:
+            self.fail_count = 0
 
         if self.fail_count >= 2:
             return ("intro", None)
@@ -121,6 +123,8 @@ class DigitMachine(SpeechInterfaceStateMachine):
 
         if not check:
             self.fail_count += 1
+        else:
+            self.fail_count = 0
 
         if self.fail_count >= 2:
             return ("conclusion", None)
