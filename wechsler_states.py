@@ -46,7 +46,7 @@ class Wechsler1StateMachine(SpeechInterfaceStateMachine):
         return ("confirm", None)
 
     def story(self, args):
-        self.speech_interface.TTS("Ok, here we go!")
+        self.speech_interface.TTS("OK, I will begin the story in a moment.")
         story_txt = self.story_texts[self.story_count]
         # story_txts = story_txt.split('.')
         #
@@ -83,7 +83,8 @@ class Wechsler1StateMachine(SpeechInterfaceStateMachine):
 
         print("response: ", res)
 
-        if res is not None and res == "" or res == "huh":
+        if res is not None and (res == "" or res == "huh"):
+            self.speech_interface.TTS("What else would you like to add?")
             return ("response_record", tts_end)
 
         return("done_confirmation", None)
