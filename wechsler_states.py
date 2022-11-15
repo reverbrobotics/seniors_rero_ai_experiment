@@ -29,6 +29,8 @@ class Wechsler1StateMachine(SpeechInterfaceStateMachine):
         self.load_wechsler_1_states()
 
     def read_intro(self, args):
+        self.speech_interface.setVocab("")
+
         self.speech_interface.TTS(self.intro_texts[self.intro_count])
         self.intro_count += 1
 
@@ -196,6 +198,7 @@ class Wechsler2StateMachine(SpeechInterfaceStateMachine):
         self.load_wechsler_2_states()
 
     def read_intro(self, args):
+        self.speech_interface.setVocab("")
         if self.intro_count >= len(self.intro_texts):
             return ("conclusion", None)
 
