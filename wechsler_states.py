@@ -222,14 +222,14 @@ class Wechsler2StateMachine(SpeechInterfaceStateMachine):
 
         if args is not None and args:
             self.speech_interface.TTS("Tell me everything else you can remember.")
-            print("addon info")
         else:
             self.speech_interface.TTS(self.prompt_texts[self.prompt_count])
             self.prompt_count += 1
 
-            sleep(0.5)
-
             self.response_count = 0
+
+        sleep(0.5)
+
         tts_end = time.time() * 1000
 
         return ("response_record", tts_end)
