@@ -263,7 +263,7 @@ class Wechsler2StateMachine(SpeechInterfaceStateMachine):
 
         res = self.speech_interface.getRawSRResult()
 
-        if res is not None and not check_string_confirm(res):
+        if res is not None and check_string_confirm(res):
             return ("prompt", True)
 
         return ("question", None)
