@@ -43,15 +43,6 @@ with SpeechInterface(ARGS.grpc_host) as speech_interface:
     print("running poem state machine")
     state_machine.run(None)
 
-#wechsler 2
-wechsler_2_logging_path = os.path.join(ARGS.logging_dir, "wechsler_2.csv")
-
-with SpeechInterface(ARGS.grpc_host) as speech_interface:
-    state_machine = Wechsler2StateMachine(speech_interface, wechsler_data_csv=ARGS.wechsler_2_dataset_csv, participant_dest_csv=wechsler_2_logging_path)
-
-    print("running wechsler 2 state machine")
-    state_machine.run(None)
-
 #digits
 digits_logging_path = os.path.join(ARGS.logging_dir, "digits.csv")
 
@@ -61,3 +52,11 @@ with SpeechInterface(ARGS.grpc_host) as speech_interface:
     print("running digit state machine")
     state_machine.run(None)
 
+#wechsler 2
+wechsler_2_logging_path = os.path.join(ARGS.logging_dir, "wechsler_2.csv")
+
+with SpeechInterface(ARGS.grpc_host) as speech_interface:
+    state_machine = Wechsler2StateMachine(speech_interface, wechsler_data_csv=ARGS.wechsler_2_dataset_csv, participant_dest_csv=wechsler_2_logging_path)
+
+    print("running wechsler 2 state machine")
+    state_machine.run(None)

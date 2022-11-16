@@ -220,16 +220,16 @@ class Wechsler2StateMachine(SpeechInterfaceStateMachine):
 
     def prompt(self, args):
 
-        self.speech_interface.TTS(self.prompt_texts[self.prompt_count])
-
         if args is not None and args:
+            self.speech_interface.TTS("Tell me everything else you can remember.")
             print("addon info")
         else:
+            self.speech_interface.TTS(self.prompt_texts[self.prompt_count])
             self.prompt_count += 1
 
-        sleep(0.5)
+            sleep(0.5)
 
-        self.response_count = 0
+            self.response_count = 0
         tts_end = time.time() * 1000
 
         return ("response_record", tts_end)
@@ -266,7 +266,7 @@ class Wechsler2StateMachine(SpeechInterfaceStateMachine):
         if res is not None and check_string_confirm(res):
             return ("prompt", True)
 
-        return ("question", None)
+        return ("recognition_prompt", None)
 
     def question(self, args):
         self.speech_interface.TTS(self.questions[self.recognition_prompt_count][self.question_count])
