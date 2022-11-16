@@ -219,8 +219,13 @@ class Wechsler2StateMachine(SpeechInterfaceStateMachine):
 
 
     def prompt(self, args):
+
         self.speech_interface.TTS(self.prompt_texts[self.prompt_count])
-        self.prompt_count += 1
+
+        if args is not None and args:
+            print("addon info")
+        else:
+            self.prompt_count += 1
 
         sleep(0.5)
 
@@ -259,7 +264,7 @@ class Wechsler2StateMachine(SpeechInterfaceStateMachine):
         res = self.speech_interface.getRawSRResult()
 
         if res is not None and not check_string_confirm(res):
-            return ("recognition_prompt", None)
+            return ("prompt", True)
 
         return ("question", None)
 
