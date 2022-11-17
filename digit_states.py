@@ -39,7 +39,6 @@ class DigitMachine(SpeechInterfaceStateMachine):
 
     def read_intro(self, args):
         self.speech_interface.setVocab("")
-        self.speech_interface.setVocab("")
         self.speech_interface.TTS(self.intro_texts[self.intro_count])
 
 
