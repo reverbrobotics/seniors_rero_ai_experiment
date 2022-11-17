@@ -19,9 +19,10 @@ class PoemStateMachine(SpeechInterfaceStateMachine):
         self.time_start = -1
 
     def read_intro(self, text, args):
+        self.speech_interface.setVocab("")
         self.speech_interface.TTS(text)
         sleep(0.5)
-        return ("confirm", None)
+        return ("confirm")
 
     def confirm(self, text, title_state, args):
         self.speech_interface.TTS(text)
@@ -31,7 +32,7 @@ class PoemStateMachine(SpeechInterfaceStateMachine):
         if res is not None and check_string_confirm(res):
             return (title_state, None)
 
-        return ("confirm", None)
+        return ("start", None)
 
     def title(self, text, line_state, args):
         self.speech_interface.TTS(text)

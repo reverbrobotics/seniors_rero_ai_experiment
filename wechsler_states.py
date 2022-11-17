@@ -30,9 +30,7 @@ class Wechsler1StateMachine(SpeechInterfaceStateMachine):
 
     def read_intro(self, args):
         self.speech_interface.setVocab("")
-
         self.speech_interface.TTS(self.intro_texts[self.intro_count])
-        self.intro_count += 1
 
         return ("confirm", None)
 
@@ -43,9 +41,10 @@ class Wechsler1StateMachine(SpeechInterfaceStateMachine):
         res = self.speech_interface.getRawSRResult()
 
         if res is not None and check_string_confirm(res):
+            self.intro_count += 1
             return ("story", None)
 
-        return ("confirm", None)
+        return ("intro", None)
 
     def story(self, args):
         self.speech_interface.TTS("OK, I will begin the story in a moment.")
