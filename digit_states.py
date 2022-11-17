@@ -217,6 +217,8 @@ class DigitMachine(SpeechInterfaceStateMachine):
             if ref_digits[i] != digits[i]:
                 return False
 
+        digits.reverse()
+
         return True
 
     def check_sequence_digits(self, ref_digits, digits):
