@@ -48,7 +48,10 @@ class PoemStateMachine(SpeechInterfaceStateMachine):
         text, tts_end, states = args
         current_line_state, next_line_state = states
 
+
         res = self.speech_interface.getRawSRResult()
+
+
         sttend = time.time() * 1000
 
         self.participant_rows.append([current_line_state, tts_end, sttend, text, res])

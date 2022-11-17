@@ -52,9 +52,12 @@ class SpeechInterface:
         sr_result = self.sr_stub.RecognizeSpeech(audio_stream)
 
         #parse json result
-        parsed_result = json.loads(sr_result.result)
-
-        return parsed_result['text']
+        try:
+            parsed_result = json.loads(sr_result.result)
+            text = parsed_result['text']
+        except:
+            text = ""
+        return text
 
     def getSRNLUResult(self):
         # create audio request object
