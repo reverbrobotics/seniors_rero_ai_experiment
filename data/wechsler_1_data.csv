@@ -1,10 +1,10 @@
 state,text
-intro,"I am going to read a short story to you. Listen carefully and try to remember it just the way I say it, as close to the same words as you can remember. When I am through, I want you to tell me everything I read to you. You should tell me all you can remember even if you are not sure."
+intro,"I am going to read a short story to you. Listen carefully and try to remember it just the way I say it, as close to the same words as you can remember. When I am through, I want you to tell me everything I red to you. You should tell me all you can remember even if you are not sure."
 confirmation,Are you ready?
 story,"Anna Thompson of South Boston, employed as a cook in a school cafeteria, reported at the police station that she had been held up on State Street the night before and robbed of fifty-six dollars. She had four small children, the rent was due, and they had not eaten for two days. The police, touched by the woman’s story, took up a collection for her. "
 response_prompt,Tell me everything you can remember about this story. Start at the beginning.  
 done_confirmation,Do you have anything else to add?
 response_prompt,Tell me everything else you can remember.
-intro,"Now I am going to read another short story to you. As with the first story, try to remember it just the way I read it."
-story,"At 6:00PM on Monday evening, Joe Garcia of San Francisco was watching television as he dressed to go out. A weather bulletin interrupted the program to warn that thunderstorms would move into the area within the next two to three hours and remain until morning. The announcer said the storm could bring hail and up to four inches of rain and cause the temperature to drop by fifteen degrees. Joe decided to stay home. He took off his coat and sat down to watch old movies. "
-conclusion,Now we will continue to the next part of the experiment.
+intro,"Now I am going to read another short story to you. As with the first story, try to remember it just the way I red it."
+story,"At 6:00 on Monday evening, Joe Garcia of San Francisco was watching television as he dressed to go out. A weather bulletin interrupted the program to warn that thunderstorms would move into the area within the next two to three hours and remain until morning. The announcer said the storm could bring hail and up to four inches of rain and cause the temperature to drop by fifteen degrees. Joe decided to stay home. He took off his coat and sat down to watch old movies. "
+conclusion,Thank you for participating!
