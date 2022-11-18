@@ -2,80 +2,40 @@ state,text
 intro,"I will read a poem, when I pause you may recite back what I said as accurately as possible. After you recite it back, we will continue to the next verse, until the poem is finished. "
 confirmation,Are you ready?
 title,The first poem is “Invention” by Billy Collins. Ready? Here we go! 
-line,Tonight the moon
-line,"is a cracker,"
-line,with a bite
-line,out of it
-line,"floating in the night, "
-line,"and in a week or so,"
-line,according to the calendar
-line,it will probably look
-line,"like a silver football,"
+line,"Tonight the moon is a cracker,"
+line,"with a bite out of it floating in the night, "
+line,"and in a week or so, according to the calendar"
+line,"it will probably look like a silver football,"
 line,"and nine, maybe ten days ago"
-line,it reminded me of 
-line,a thin bright claw.
-line,But eventually 
-line,"by the end of the month,"
-line,"I reckon,"
-line,"it will waste away to nothing,"
-line,"nothing but stars in the sky, "
-line,and I will have
-line,"a few nights to myself,"
-line,a little time to rest
-line,my jittery pen.
+line,it reminded me of a thin bright claw.
+line,"But eventually by the end of the month,I reckon,"
+line,"it will waste away to nothing,nothing but stars in the sky, "
+line,"and I will have a few nights to myself,"
+line,a little time to rest my jittery pen.
 title,"We will now recite another poem, called “The Moment” by Margaret Atwood "
-line,"The moment when,"
-line,after many years
-line,of hard work 
-line,and a long voyage
-line,you stand in
-line,the centre of
-line,"your room, house, half-acre,"
-line,"square mile, island, country,"
-line,knowing at last  
-line,"how you got there,"
-line,"and say, I own this,"
-line,is the same moment when
-line,the trees unloose their soft arms
-line,"from around you,"
-line,"the birds take back their language,"
-line,"the cliffs fissure and collapse, "
-line,the air moves back 
-line,from you like a wave
-line,and you can't breathe.
-line,"No, they whisper. You own nothing."
-line,"You were a visitor,"
-line,"time after time climbing the hill,"
-line,"planting the flag, proclaiming."
-line,We never belonged to you. 
-line,You never found us.
+line,"The moment when,after many years of hard work and a long voyage"
+line,"you stand in the centre of your room, house, half-acre, country, "
+line,"knowing at last how you got there, and say, I own this,"
+line,"is the same moment when the trees unloose their soft arms from around you,"
+line,"the birds take back their language, the cliffs fissure and collapse,"
+line,the air moves back from you like a wave and you can't breathe.
+line,"No, they whisper. You own nothing. "
+line,"You were a visitor, time after time climbing the hill, planting the flag, proclaiming."
+line,We never belonged to you. You never found us.
 line,It was always the other way round.
 title,"We will now recite another poem, called “Stopping by woods on a snowy evening” by Robert Frost"
-line,Whose woods these are  
-line,I think I know.
-line,His house is in
-line,the village though;
-line,He will not see me
-line,stopping here
-line,To watch his woods  
-line,fill up with snow.
-line,My little horse
-line,must think it queer
-line,To stop without  
-line,a farmhouse near.
-line,Between the woods
-line,and frozen lake.
-line,The darkest evening
-line,of the year.
+line,Whose woods these are I think I know.
+line,His house is in the village though;
+line,He will not see me stopping here 
+line,To watch his woods fill up with snow.
+line,My little horse must think it queer
+line,To stop without a farmhouse near.
+line,Between the woods and frozen lake.
+line,The darkest evening of the year.
 line,He gives his harness bells a shake.
-line,To ask if there is 
-line,some mistake.
-line,The only other sound’s the sweep. 
-line,Of easy wind 
-line,and downy flake.
-line,"The woods are lovely, "
-line,dark and deep
-line,"But I have promises to keep,"
-line,And miles to go before I sleep
-line,And miles to go before I sleep.
-conclusion,Now we will continue to the next part of the experiment.
+line,To ask if there is some mistake.
+line,The only other sound’s the sweep.
+line,Of easy wind and downy flake.
+line,"The woods are lovely, dark and deep"
+line,"But I have promises to keep, And miles to go before I sleep"
+conclusion,Thank you for participating!
