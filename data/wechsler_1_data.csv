@@ -1,6 +1,6 @@
 state,text
 intro,"I am going to read a short story to you. Listen carefully and try to remember it just the way I say it, as close to the same words as you can remember. When I am through, I want you to tell me everything I red to you. You should tell me all you can remember even if you are not sure."
-confirmation,Are you ready?
+confirmation,"Do you understand?/OK, let me know when you are ready to start."
 story,"Anna Thompson of South Boston, employed as a cook in a school cafeteria, reported at the police station that she had been held up on State Street the night before and robbed of fifty-six dollars. She had four small children, the rent was due, and they had not eaten for two days. The police, touched by the woman’s story, took up a collection for her. "
 response_prompt,Tell me everything you can remember about this story. Start at the beginning.  
 done_confirmation,Do you have anything else to add?

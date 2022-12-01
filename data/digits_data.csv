@@ -1,6 +1,6 @@
 state,text
 intro," I am going to say some numbers. Listen carefully, I can only say them one time. When I am through I want you to say the numbers backward. For example, if I say seven one, then you would say one seven."
-confirmation,Are you ready?
+confirmation,"Do you understand?/OK, let me know when you are ready to start."
 backward_digits,"three, one"
 backward_digits,"two, four"
 backward_digits,"four, six,"

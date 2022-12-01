@@ -1,6 +1,6 @@
 state,text
 intro,"I will read a poem, when I pause you may recite back what I said as accurately as possible. After you recite it back, we will continue to the next verse, until the poem is finished. "
-confirmation,Are you ready?
+confirmation,"Do you understand?/OK, let me know when you are ready to start."
 title,The first poem is “Invention” by Billy Collins. Here we go! 
 line,"Tonight the moon is a cracker, "
 line,"nothing but stars in the sky, and I will have a few nights to myself, a little time to rest my jittery pen. "

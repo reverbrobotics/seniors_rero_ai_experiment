@@ -24,11 +24,20 @@ class PoemStateMachine(SpeechInterfaceStateMachine):
         return ("confirm", None)
 
     def confirm(self, text, title_state, args):
-        self.speech_interface.TTS(text)
+        self.speech_interface.TTS(text.split('/')[0])
+
+        self.speech_interface.setVocab("")
 
         res = self.speech_interface.getRawSRResult()
 
         if res is not None and check_string_confirm(res):
+            self.speech_interface.TTS(text.split('/')[1])
+
+            res = self.speech_interface.getRawSRResult()
+
+            while res is None or not check_string_confirm(res):
+                res = self.speech_interface.getRawSRResult()
+
             return (title_state, None)
 
         return ("start", None)

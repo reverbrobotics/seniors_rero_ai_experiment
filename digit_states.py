@@ -46,14 +46,22 @@ class DigitMachine(SpeechInterfaceStateMachine):
         return ("confirm", None)
 
     def confirm(self, args):
-        self.speech_interface.TTS(self.confirm_text)
+        self.speech_interface.TTS(self.confirm_text.split('/')[0])
 
         res = self.speech_interface.getRawSRResult()
         self.fail_count = 0
 
         if res is not None and check_string_confirm(res):
+            self.speech_interface.TTS(self.confirm_text.split('/')[1])
+
+            res = self.speech_interface.getRawSRResult()
+
+            while res is None or not check_string_confirm(res):
+                res = self.speech_interface.getRawSRResult()
+
             self.speech_interface.setVocab("zero one two three four five six seven eight nine")
             self.intro_count += 1
+
 
             if self.intro_count == 1:
                 return ("read_backward_digits", None)

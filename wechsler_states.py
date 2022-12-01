@@ -36,13 +36,22 @@ class Wechsler1StateMachine(SpeechInterfaceStateMachine):
 
 
     def confirm(self, text, args):
-        self.speech_interface.TTS(text)
+        self.speech_interface.TTS(text.split('/')[0])
 
         res = self.speech_interface.getRawSRResult()
 
         if res is not None and check_string_confirm(res):
             self.intro_count += 1
+
+            self.speech_interface.TTS(text.split('/')[1])
+
+            res = self.speech_interface.getRawSRResult()
+
+            while res is None or not check_string_confirm(res):
+                res = self.speech_interface.getRawSRResult()
+
             return ("story", None)
+
 
         return ("intro", None)
 
