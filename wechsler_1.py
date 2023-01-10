@@ -7,7 +7,7 @@
 # =========================================================================== #
 
 from wechsler_states import Wechsler1StateMachine
-from speech_interface import SpeechInterface
+from dummy_speech_interface import SpeechInterface
 import argparse
 
 parser = argparse.ArgumentParser(description="Wechsler 1 Experiment")

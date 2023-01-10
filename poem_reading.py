@@ -7,7 +7,7 @@
 # =========================================================================== #
 
 from poem_states import PoemStateMachine
-from speech_interface import SpeechInterface
+from dummy_speech_interface import SpeechInterface
 import argparse
 
 parser = argparse.ArgumentParser(description="Poem Experiment")

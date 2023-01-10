@@ -5,7 +5,7 @@ from time import sleep
 import time
 import re
 
-from speech_interface import SpeechInterfaceStateMachine
+from dummy_speech_interface import SpeechInterfaceStateMachine
 from util import check_string_confirm
 
 
