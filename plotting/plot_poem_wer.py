@@ -1,0 +1,55 @@
+import csv
+import json
+import math
+
+import seaborn as sns
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+
+
+sns.set_theme(style="whitegrid")
+sns.set(font_scale=1.5)
+
+labels = ["poem", ]
+disp_labels = ["Poem",]
+
+
+fp = "/media/lukas/data/datasets/seniors_dataset/results/wer/{}_wer.csv"
+
+data = []
+
+
+for i, label in enumerate(labels):
+    with open(fp.format(label), 'r') as rf:
+        reader = csv.reader(rf)
+        header = next(reader)
+
+        for row in reader:
+            data.append((label, disp_labels[i], float(row[4])))
+
+
+
+df = pd.DataFrame(data)
+df.columns = ["label", "All Participants", "WER (%)"]
+print(df)
+
+df["WER (%)"] *= 100
+
+stats = df.groupby(['All Participants'])['WER (%)'].agg(['mean', 'count', 'std'])
+
+ci95 = []
+
+for i in stats.index:
+    m, c, s = stats.loc[i]
+    ci95.append(1.96*s/math.sqrt(c))
+
+
+stats['ci95'] = ci95
+print(stats)
+
+plt.figure(figsize=(12,8))
+ax = sns.barplot(x="All Participants", y="WER (%)", data=df, ci=95, capsize=0.25)
+plt.title("Word Error Rate (WER) Results on Poem Task")
+
+plt.show()
