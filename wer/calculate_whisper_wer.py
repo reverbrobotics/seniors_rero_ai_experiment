@@ -5,9 +5,9 @@ from tqdm import tqdm
 
 from wer_utils import convert_text, wer, digitsrep
 
-src_dir = "/media/lukas/data/datasets/seniors_dataset/participant_whisper_transcripts"
+src_dir = "/media/lukas/data/datasets/seniors_dataset/participant_whisper_tiny_transcripts"
 ref_dir = "/media/lukas/data/datasets/seniors_dataset/participant_final_transcripts"
-dst_file = "/media/lukas/data/datasets/seniors_dataset/results/wer/whisper_max_wer.csv"
+dst_file = "/media/lukas/data/datasets/seniors_dataset/results/wer/whisper_tiny_wer.csv"
 
 out_rows = [["pid", "file", "transcript", "ref_transcript", "wer"]]
 
@@ -47,8 +47,8 @@ for file in tqdm(sorted(os.listdir(src_dir))):
             continue
 
         wer_res = wer(src_transcript, ref_transcript)
-        if wer_res > 1:
-            wer_res = 1
+        # if wer_res > 1:
+        #     wer_res = 1
 
         out_rows.append([src_rows[i][0], src_rows[i][1], src_transcript, ref_transcript, wer_res])
 

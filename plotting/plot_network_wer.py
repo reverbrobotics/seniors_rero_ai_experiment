@@ -11,8 +11,8 @@ import matplotlib.pyplot as plt
 sns.set_theme(style="whitegrid")
 sns.set(font_scale=1.5)
 
-labels = ["vosk", "vosk_max", "whisper_digitrep", "whisper_max"]
-disp_labels = ["ReRo/Vosk", "ReRo/Vosk (Max Length)", "OpenAI Whisper","OpenAI Whisper (Max Length)"]
+labels = ["vosk", "vosk_max", "whisper_digitrep", "whisper_max", "whisper_tiny", "whisper_tiny_max"]
+disp_labels = ["Vosk", "Vosk (Max 1.0)", "Whisper","Whisper (Max 1.0)", "Tiny Whisper","Tiny Whisper (Max 1.0)"]
 
 
 fp = "/media/lukas/data/datasets/seniors_dataset/results/wer/{}_wer.csv"

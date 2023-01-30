@@ -9,10 +9,10 @@ participant_folder = "/media/lukas/data/datasets/seniors_dataset/participant_aud
 for src in sorted(os.listdir(participant_folder)):
     print("processing ", src)
     src_folder = os.path.join(participant_folder, src)
-    dst_path = f"/media/lukas/data/datasets/seniors_dataset/participant_audio_transcripts/{src}.csv"
+    dst_path = f"/media/lukas/data/datasets/seniors_dataset/participant_whisper_tiny_transcripts/{src}.csv"
     out_rows = []
 
-    model = whisper.load_model("base.en")
+    model = whisper.load_model("tiny.en")
 
     for file in tqdm(sorted(os.listdir(src_folder))):
         src_file = os.path.join(src_folder, file)
